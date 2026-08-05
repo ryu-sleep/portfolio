@@ -533,7 +533,7 @@
     </div>
     <div class="about-inner">
       <div class="reveal">
-        <p>見やすさだけではなく、ユーザーが迷わず操作できるUIと保守しやすいコードを意識して開発しています。</p>
+        <p>見た目の美しさだけでなく、ユーザーが迷わず操作できるUIと、保守しやすいコードを意識して開発しています。</p>
         <p>制作したアプリケーションはすべて GitHub で公開しています。実装内容や開発プロセスも含めて、ぜひご覧ください。</p>
       </div>
       <ul class="contact-list reveal">
@@ -586,21 +586,32 @@ const works = [
 
 /* =========================================================
    スキルデータ
-   icon には Simple Icons のスラッグ名を指定してください
-   （https://simpleicons.org/ で検索できます）。
-   新しいスキルを増やす場合は { name, icon } を1つ追加するだけです。
+   iconUrl にはアイコン画像の直リンクを指定します。
+   ・プログラミング言語/DB/ツール系は Devicon が充実しています
+     （例: https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg）
+   ・Adobe製品などは Simple Icons を使っています
+     （例: https://cdn.simpleicons.org/adobephotoshop）
+   新しいスキルを増やす場合は { name, iconUrl } を1つ追加するだけです。
    ========================================================= */
+const DEVICON = "https://cdn.jsdelivr.net/gh/devicons/devicon/icons";
 const skills = [
-  { name:"HTML5", icon:"html5" },
-  { name:"CSS3", icon:"css3" },
-  { name:"JavaScript", icon:"javascript" },
-  { name:"TypeScript", icon:"typescript" },
-  { name:"React", icon:"react" },
-  { name:"Next.js", icon:"nextdotjs" },
-  { name:"Vue.js", icon:"vuedotjs" },
-  { name:"Git", icon:"git" },
-  { name:"Figma", icon:"figma" },
-  { name:"Vite", icon:"vite" }
+  // 言語
+  { name:"JavaScript", iconUrl:`${DEVICON}/javascript/javascript-original.svg` },
+  { name:"HTML5", iconUrl:`${DEVICON}/html5/html5-original.svg` },
+  { name:"CSS3", iconUrl:`${DEVICON}/css3/css3-original.svg` },
+  { name:"Java", iconUrl:`${DEVICON}/java/java-original.svg` },
+  { name:"PHP", iconUrl:`${DEVICON}/php/php-original.svg` },
+  { name:"CakePHP", iconUrl:`${DEVICON}/cakephp/cakephp-plain.svg` },
+  // DB
+  { name:"SQL Server", iconUrl:"https://cdn.simpleicons.org/microsoftsqlserver" },
+  { name:"MySQL", iconUrl:`${DEVICON}/mysql/mysql-original.svg` },
+  // 制作で使用（バージョン管理・公開）
+  { name:"Git", iconUrl:`${DEVICON}/git/git-original.svg` },
+  { name:"GitHub", iconUrl:`${DEVICON}/github/github-original.svg` },
+  // 編集ソフト
+  { name:"After Effects", iconUrl:"https://cdn.simpleicons.org/adobeaftereffects" },
+  { name:"Premiere Pro", iconUrl:"https://cdn.simpleicons.org/adobepremierepro" },
+  { name:"Photoshop", iconUrl:"https://cdn.simpleicons.org/adobephotoshop" }
 ];
 
 /* ---------- render works ---------- */
@@ -660,7 +671,7 @@ skills.forEach(s => {
   card.className = 'skill-card reveal';
   card.innerHTML = `
     <span class="skill-icon">
-      <img src="https://cdn.simpleicons.org/${s.icon}" alt="${s.name}" loading="lazy" width="26" height="26">
+      <img src="${s.iconUrl}" alt="${s.name}" loading="lazy" width="26" height="26">
     </span>
     <span class="skill-name">${s.name}</span>
   `;
