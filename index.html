@@ -312,9 +312,17 @@
   @media (max-width:820px){
     .track-panel-inner{ grid-template-columns:1fr; }
   }
-  .thumb{
+  .thumb-frame{
     aspect-ratio:4/3;
-    border-radius:2px;
+    border:1px solid var(--line);
+    border-radius:8px;
+    overflow:hidden;
+    background:#fff;
+    box-shadow:0 24px 48px -28px rgba(17,17,17,0.35);
+  }
+  .thumb{
+    width:100%;
+    height:100%;
     position:relative;
     overflow:hidden;
   }
@@ -630,7 +638,9 @@ works.forEach((w, i) => {
     </button>
     <div class="track-panel" id="panel-${i}">
       <div class="track-panel-inner">
-        <div class="thumb ${w.thumbImage ? '' : 'is-placeholder'}" data-index="${idx}" style="${w.thumbImage ? `background-image:url('${w.thumbImage}');background-size:cover;background-position:center;` : `background:linear-gradient(135deg, ${w.thumbFrom}, ${w.thumbTo});`}"></div>
+        <div class="thumb-frame">
+          <div class="thumb ${w.thumbImage ? '' : 'is-placeholder'}" data-index="${idx}" style="${w.thumbImage ? `background-image:url('${w.thumbImage}');background-size:cover;background-position:center;` : `background:linear-gradient(135deg, ${w.thumbFrom}, ${w.thumbTo});`}"></div>
+        </div>
         <div>
           <div class="detail-block">
             <span class="detail-label">概要</span>
