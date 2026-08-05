@@ -1,9 +1,8 @@
 # Portfolio Site
 
-フロントエンドエンジニア転職用のポートフォリオサイトです。
 フレームワークを使わず、素の HTML / CSS / JavaScript のみで実装しています。
 
-🔗 **Demo**: https://ryu-sleep.github.io/portfolio/ （公開後にURLを差し替えてください）
+https://ryu-sleep.github.io/portfolio/
 
 ## 特徴
 
@@ -31,7 +30,7 @@ portfolio/
 
 ## ローカルでの確認方法
 
-ビルドツールは不要です。`index.html` をブラウザで開くだけで確認できます。
+`index.html` をブラウザで開くだけで確認できます。
 
 ```bash
 git clone https://github.com/ryu-sleep/portfolio.git
@@ -41,12 +40,10 @@ open index.html   # Windowsの場合は start index.html
 
 ## 内容の編集方法
 
-作品・スキルは `index.html` 内の `<script>` にあるデータ配列を編集するだけで反映されます。
+作品・スキルの内容は、`index.html` 内の `<script>` にあるデータ配列を編集するだけで変更できます。
 
 - **作品を追加/編集**: `works` 配列にオブジェクトを1つ追加・編集
 - **スキルを追加/編集**: `skills` 配列に `{ name, icon }` を追加・編集（`icon` は [Simple Icons](https://simpleicons.org/) のスラッグ名）
-
-詳しい構造は [DEVELOPMENT.md](./DEVELOPMENT.md) を参照してください。
 
 ## デプロイ（GitHub Pages）
 
@@ -57,4 +54,4 @@ open index.html   # Windowsの場合は start index.html
 
 ## License
 
-このリポジトリは自由に個人ポートフォリオとして利用・改変して構いません。
+このリポジトリは、個人のポートフォリオとして自由に利用・改変して構いません。
