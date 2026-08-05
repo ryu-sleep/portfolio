@@ -19,7 +19,7 @@ https://ryu-sleep.github.io/portfolio/
 - HTML5 / CSS3（カスタムプロパティ、Grid、Flexbox）
 - Vanilla JavaScript（フレームワーク不使用）
 - フォント: Google Fonts（Zen Kaku Gothic New / Inter / JetBrains Mono）
-- アイコン: [Simple Icons](https://simpleicons.org/) CDN
+- アイコン: [Devicon](https://devicon.dev/)、[Iconify (Logos)](https://icon-sets.iconify.design/logos/) のCDN
 
 ## ファイル構成
 
@@ -44,7 +44,10 @@ open index.html   # Windowsの場合は start index.html
 作品・スキルの内容は、`index.html` 内の `<script>` にあるデータ配列を編集するだけで変更できます。
 
 - **作品を追加/編集**: `works` 配列にオブジェクトを1つ追加・編集
-- **スキルを追加/編集**: `skills` 配列に `{ name, icon }` を追加・編集（`icon` は [Simple Icons](https://simpleicons.org/) のスラッグ名）
+- **スキルを追加/編集**: `skills` 配列に `{ name, iconUrl }` を追加・編集
+  - `iconUrl` はアイコン画像の直リンクです
+  - プログラミング言語・DB・ツール系は [Devicon](https://devicon.dev/) から探すのがおすすめです
+  - Adobe製品などは [Iconify (Logos)](https://icon-sets.iconify.design/logos/) から探し、`https://api.iconify.design/logos/アイコン名.svg` の形式で指定します
 
 ## デプロイ（GitHub Pages）
 

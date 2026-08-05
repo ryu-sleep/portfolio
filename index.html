@@ -587,10 +587,10 @@ const works = [
 /* =========================================================
    スキルデータ
    iconUrl にはアイコン画像の直リンクを指定します。
-   ・プログラミング言語/DB/ツール系は Devicon が充実しています
-     （例: https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg）
-   ・Adobe製品などは Simple Icons を使っています
-     （例: https://cdn.simpleicons.org/adobephotoshop）
+   ・プログラミング言語/DB/ツール系は Devicon
+     （例: https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg）
+   ・Adobe製品などは Iconify（Logosセット）
+     （例: https://api.iconify.design/logos/adobe-photoshop.svg）
    新しいスキルを増やす場合は { name, iconUrl } を1つ追加するだけです。
    ========================================================= */
 const DEVICON = "https://cdn.jsdelivr.net/gh/devicons/devicon/icons";
@@ -603,15 +603,15 @@ const skills = [
   { name:"PHP", iconUrl:`${DEVICON}/php/php-original.svg` },
   { name:"CakePHP", iconUrl:`${DEVICON}/cakephp/cakephp-plain.svg` },
   // DB
-  { name:"SQL Server", iconUrl:"https://cdn.simpleicons.org/microsoftsqlserver" },
+  { name:"SQL Server", iconUrl:`${DEVICON}/microsoftsqlserver/microsoftsqlserver-original.svg` },
   { name:"MySQL", iconUrl:`${DEVICON}/mysql/mysql-original.svg` },
   // 制作で使用（バージョン管理・公開）
   { name:"Git", iconUrl:`${DEVICON}/git/git-original.svg` },
   { name:"GitHub", iconUrl:`${DEVICON}/github/github-original.svg` },
   // 編集ソフト
-  { name:"After Effects", iconUrl:"https://cdn.simpleicons.org/adobeaftereffects" },
-  { name:"Premiere Pro", iconUrl:"https://cdn.simpleicons.org/adobepremierepro" },
-  { name:"Photoshop", iconUrl:"https://cdn.simpleicons.org/adobephotoshop" }
+  { name:"After Effects", iconUrl:"https://api.iconify.design/logos/adobe-after-effects.svg" },
+  { name:"Premiere Pro", iconUrl:"https://api.iconify.design/logos/adobe-premiere.svg" },
+  { name:"Photoshop", iconUrl:"https://api.iconify.design/logos/adobe-photoshop.svg" }
 ];
 
 /* ---------- render works ---------- */

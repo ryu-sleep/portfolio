@@ -71,14 +71,19 @@
 
 ## 4. スキルの追加・編集
 
-`skills` 配列に `{ name, icon }` を追加するだけです。
+`skills` 配列に `{ name, iconUrl }` を追加するだけです。
 
 ```js
-{ name: "Docker", icon: "docker" }
+{ name: "Docker", iconUrl: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg" }
 ```
 
-`icon` は [Simple Icons](https://simpleicons.org/) 上で検索できるスラッグ名です。
-`https://cdn.simpleicons.org/{icon}` からロゴ画像を取得しているため、画像ファイルの追加は不要です。
+`iconUrl` はアイコン画像ファイルの直リンクです。画像ファイルを自分で用意する必要はありません。
+
+- プログラミング言語・DB・ツール系は [Devicon](https://devicon.dev/) にほぼ揃っています
+  （URL例: `https://cdn.jsdelivr.net/gh/devicons/devicon/icons/{アイコン名}/{アイコン名}-original.svg`）
+- Adobe製品や、Deviconに無いブランドロゴは [Iconify (Logos)](https://icon-sets.iconify.design/logos/) を使います
+  （URL例: `https://api.iconify.design/logos/{アイコン名}.svg`）
+- 以前は Simple Icons（`cdn.simpleicons.org`）も使用していましたが、一部アイコン（CSS3、Java、Microsoft SQL Server、Adobe製品など）でスラッグ名の不一致により画像が表示されない問題があったため、上記2つに切り替えています。新しいスキルを追加する際は、まずDeviconで探し、無ければIconify (Logos) で探すのがおすすめです。
 
 ## 5. 主要なUIの実装メモ
 
