@@ -1,6 +1,7 @@
 # Portfolio Site
 
-フレームワークを使わず、素の HTML / CSS / JavaScript のみで実装しています。
+音楽プレーヤーのトラックリストをモチーフにした、ポートフォリオサイトです。
+作品情報やスキルをシンプルに閲覧できるよう、HTML・CSS・JavaScriptのみで実装しています。
 
 https://ryu-sleep.github.io/portfolio/
 
@@ -11,7 +12,7 @@ https://ryu-sleep.github.io/portfolio/
 - スキル一覧をアイコンカードで表示
 - レスポンシブ対応（スマートフォン〜デスクトップ）
 - キーボード操作、`prefers-reduced-motion` に対応したアクセシビリティ配慮
-- ビルド不要。`index.html` を開くだけで動作
+- `index.html` を開くだけで動作
 
 ## 技術スタック
 
