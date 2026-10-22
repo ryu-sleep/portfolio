@@ -313,12 +313,20 @@
     .track-panel-inner{ grid-template-columns:1fr; }
   }
   .thumb-frame{
-    aspect-ratio:4/3;
+    align-self:start;
     border:1px solid var(--line);
     border-radius:8px;
     overflow:hidden;
     background:#fff;
     box-shadow:0 24px 48px -28px rgba(17,17,17,0.35);
+  }
+  .thumb-frame.is-placeholder-frame{
+    aspect-ratio:4/3;
+  }
+  .thumb-frame img{
+    display:block;
+    width:100%;
+    height:auto;
   }
   .thumb{
     width:100%;
@@ -638,8 +646,10 @@ works.forEach((w, i) => {
     </button>
     <div class="track-panel" id="panel-${i}">
       <div class="track-panel-inner">
-        <div class="thumb-frame">
-          <div class="thumb ${w.thumbImage ? '' : 'is-placeholder'}" data-index="${idx}" style="${w.thumbImage ? `background-image:url('${w.thumbImage}');background-size:cover;background-position:center;` : `background:linear-gradient(135deg, ${w.thumbFrom}, ${w.thumbTo});`}"></div>
+        <div class="thumb-frame ${w.thumbImage ? '' : 'is-placeholder-frame'}">
+          ${w.thumbImage
+            ? `<img src="${w.thumbImage}" alt="${w.title} の画面" loading="lazy">`
+            : `<div class="thumb is-placeholder" data-index="${idx}" style="background:linear-gradient(135deg, ${w.thumbFrom}, ${w.thumbTo});"></div>`}
         </div>
         <div>
           <div class="detail-block">
