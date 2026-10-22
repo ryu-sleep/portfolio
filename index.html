@@ -302,7 +302,7 @@
     overflow:hidden;
     transition:max-height .4s ease;
   }
-  .track-panel.open{ max-height:900px; }
+  .track-panel.open{ max-height:1800px; }
   .track-panel-inner{
     display:grid;
     grid-template-columns:1fr 1.3fr;
@@ -579,15 +579,15 @@ const works = [
     thumbFrom:"#1e3a5f", thumbTo:"#767672"
   },
   {
-    title: "タスク管理アプリ",
+    title: "PFC NOTE",
     year: "2026",
-    tags: ["React", "TypeScript", "Firebase"],
-    summary: "チームの進捗を可視化するカンバン型タスク管理ツール。",
-    description: "ドラッグ&ドロップでタスクを管理できるカンバンボード形式のアプリです。リアルタイム同期にFirestoreを採用し、複数人での同時編集に対応しています。状態管理はZustandで最小限に構成しました。",
-    usage: "1. GitHubリポジトリをクローン\n2. npm install\n3. npm run dev でローカル起動\n4. デモは下記リンクからブラウザで直接お試しいただけます。",
-    demoUrl: "https://example.com/demo",
-    githubUrl: "https://github.com/ryu-sleep/task-app",
-    thumbImage: null, // 画像を使う場合はここにファイル名/URLを入れる（例: "images/task-app.png"）
+    tags: ["JavaScript", "Gemini API", "Claude API"],
+    summary: "食事の写真を撮るだけで、AIがPFCを自動計算してくれる個人開発の食事記録Webアプリ。",
+    description: "既存の食事記録アプリにおける広告表示やアカウント登録、有料プランへの依存をなくし、ユーザー自身がデータを管理できるものをテーマに制作しました。\n食事写真はAIによる栄養素の解析にだけ使用して、保存しない設計としています。また、ユーザー自身のAPIキーを利用するBYOK方式を採用し、Google GeminiとAnthropic Claudeを切り替えて利用できるようにしました。\n食事記録などのデータはブラウザのlocalStorageに保存します。外部ライブラリやビルドツールを使用せず、単一のindex.htmlで動作する構成とし、導入の手軽さとシンプルな実行環境を実現しました。",
+    usage: "1. デモページを開く（またはリポジトリをクローン）\n2. Google AI Studio で無料のAPIキーを発行\n3. 画面右上の設定（⚙）からAPIキーを登録\n4. 食事の写真から解析して記録を開始",
+    demoUrl: "https://ryu-sleep.github.io/pfc-note/",
+    githubUrl: "https://github.com/ryu-sleep/pfc-note",
+    thumbImage: null, // 画像を使う場合はここにファイル名/URLを入れる（例: "images/pfc-note.png"）
     thumbFrom:"#1e3a5f", thumbTo:"#3d6fb4" // 画像が無い場合の背景グラデーション色
   }
 ];
@@ -648,7 +648,7 @@ works.forEach((w, i) => {
           </div>
           <div class="detail-block">
             <span class="detail-label">詳細</span>
-            <p>${w.description}</p>
+            <p style="white-space:pre-line;">${w.description}</p>
           </div>
           <div class="detail-block">
             <span class="detail-label">デモ・使用方法</span>
